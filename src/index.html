@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetLog - Tu Blog de Mascotas Favorito</title>
+    <link rel="stylesheet" href="C:\petlog-website\src\css\style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <nav>
+                <div class="logo">PetLog</div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">🏠 Inicio</a></li>
+                    <li><a href="#gatos">🐱 Gatos</a></li>
+                    <li><a href="#perros">🐶 Perros</a></li>
+                    <li><a href="#cuidados">💖 Cuidados</a></li>
+                    <li><a href="#contacto">📧 Contacto</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-wrapper">
+            <!-- Blog Posts Section -->
+            <main class="blog-posts">
+                <h1 class="section-title">Últimas Publicaciones</h1>
+                
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Cargando publicaciones...</p>
+                </div>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="post-date">📅 15 de Marzo, 2024</span>
+                        <span class="post-author">👤 Dr. María González</span>
+                    </div>
+                    <h2 class="post-title">¿Qué tienen de especial los gatos calicó machos?</h2>
+                    <p class="post-excerpt">
+                        ¡Descubre el increíble mundo de la genética felina! Los gatos calicó machos son extremadamente raros, 
+                        apareciendo solo en 1 de cada 3,000 gatos calicó. Te revelamos los secretos detrás de esta anomalía 
+                        genética fascinante y por qué estos felinos son tan especiales. Desde su valor económico hasta sus 
+                        características únicas de salud, conoce todo sobre estos tesoros felinos.
+                    </p>
+                    <div class="post-tags">
+                        <a href="#" class="tag cat-tag">🐱 Gatos</a>
+                        <a href="#" class="tag">🧬 Genética</a>
+                        <a href="#" class="tag cat-tag">🎨 Calicó</a>
+                        <a href="#" class="tag">🔬 Ciencia</a>
+                    </div>
+                    <a href="#" class="read-more">Leer Más</a>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="post-date">📅 12 de Marzo, 2024</span>
+                        <span class="post-author">👤 Carlos Mendoza</span>
+                    </div>
+                    <h2 class="post-title">Cómo adoptar un Pastor Alemán cambió mi vida</h2>
+                    <p class="post-excerpt">
+                        Una historia emotiva de transformación personal a través del amor incondicional. Desde el primer día 
+                        que Max llegó a mi hogar, todo cambió: mi rutina, mis prioridades, e incluso mi perspectiva de la vida. 
+                        Descubre cómo esta noble raza no solo se convirtió en mi compañero fiel, sino también en mi mejor maestro 
+                        de responsabilidad, lealtad y amor verdadero. Una experiencia que todo amante de los perros debe leer.
+                    </p>
+                    <div class="post-tags">
+                        <a href="#" class="tag dog-tag">🐶 Perros</a>
+                        <a href="#" class="tag adoption-tag">❤️ Adopción</a>
+                        <a href="#" class="tag dog-tag">🐕‍🦺 Pastor Alemán</a>
+                        <a href="#" class="tag">📖 Historia Personal</a>
+                    </div>
+                    <a href="#" class="read-more">Leer Más</a>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="post-date">📅 10 de Marzo, 2024</span>
+                        <span class="post-author">👤 Ana Rodríguez</span>
+                    </div>
+                    <h2 class="post-title">Gatos o perros: ¿cuál es mejor para ti? La perspectiva de una criadora</h2>
+                    <p class="post-excerpt">
+                        Después de 15 años criando tanto gatos como perros, revelo la verdad que nadie te cuenta. No se trata 
+                        de cuál es "mejor", sino de cuál encaja perfectamente con tu estilo de vida. Analizo factores cruciales: 
+                        tiempo disponible, espacio de vivienda, gastos reales, necesidades emocionales y mucho más. Una guía 
+                        honesta y práctica que te ayudará a tomar la decisión más importante para tu nueva mascota.
+                    </p>
+                    <div class="post-tags">
+                        <a href="#" class="tag cat-tag">🐱 Gatos</a>
+                        <a href="#" class="tag dog-tag">🐶 Perros</a>
+                        <a href="#" class="tag">⚖️ Comparación</a>
+                        <a href="#" class="tag">🏠 Estilo de Vida</a>
+                        <a href="#" class="tag">🧠 Consejos Experto</a>
+                    </div>
+                    <a href="#" class="read-more">Leer Más</a>
+                </article>
+
+                <button id="loadMore" class="btn-primary" onclick="loadMorePosts()">
+                    🐾 Cargar Más Publicaciones
+                </button>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Search Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title search-title">Buscar</h3>
+                    <input type="text" class="search-box" placeholder="Buscar publicaciones sobre mascotas..." onkeyup="searchPosts(this.value)">
+                </div>
+
+                <!-- Recent Posts Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title recent-title">Publicaciones Recientes</h3>
+                    <ul class="recent-posts">
+                        <li><a href="#">¿Qué tienen de especial los gatos calicó machos?</a></li>
+                        <li><a href="#">Cómo adoptar un Pastor Alemán cambió mi vida</a></li>
+                        <li><a href="#">Gatos o perros: ¿cuál es mejor para ti?</a></li>
+                        <li><a href="#">Los 10 alimentos tóxicos para perros que debes evitar</a></li>
+                        <li><a href="#">Cómo entrenar a tu gato para usar el arenero</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tags Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title tags-title">Etiquetas Populares</h3>
+                    <div class="tag-cloud">
+                        <a href="#" class="tag cat-tag" onclick="filterByTag('Gatos')">🐱 Gatos</a>
+                        <a href="#" class="tag dog-tag" onclick="filterByTag('Perros')">🐶 Perros</a>
+                        <a href="#" class="tag care-tag" onclick="filterByTag('Cuidados')">💖 Cuidados</a>
+                        <a href="#" class="tag adoption-tag" onclick="filterByTag('Adopción')">❤️ Adopción</a>
+                        <a href="#" class="tag" onclick="filterByTag('Salud')">🏥 Salud</a>
+                        <a href="#" class="tag" onclick="filterByTag('Alimentación')">🍖 Alimentación</a>
+                        <a href="#" class="tag" onclick="filterByTag('Entrenamiento')">🎾 Entrenamiento</a>
+                        <a href="#" class="tag" onclick="filterByTag('Comportamiento')">🧠 Comportamiento</a>
+                        <a href="#" class="tag" onclick="filterByTag('Razas')">🏆 Razas</a>
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title categories-title">Categorías</h3>
+                    <ul class="recent-posts">
+                        <li><a href="#" onclick="filterByCategory('cuidados')">Cuidados y Salud (12)</a></li>
+                        <li><a href="#" onclick="filterByCategory('comportamiento')">Comportamiento (8)</a></li>
+                        <li><a href="#" onclick="filterByCategory('adopcion')">Adopción y Rescate (6)</a></li>
+                        <li><a href="#" onclick="filterByCategory('alimentacion')">Alimentación (10)</a></li>
+                        <li><a href="#" onclick="filterByCategory('entretenimiento')">Entretenimiento (4)</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre PetLog</h3>
+                    <p>Tu fuente confiable de información sobre mascotas. Consejos de expertos, historias inspiradoras 
+                    y todo lo que necesitas saber para cuidar mejor a tus compañeros peludos. Únete a nuestra 
+                    comunidad de amantes de las mascotas.</p>
+                    <div class="social-links">
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="Facebook">📘</a>
+                        <a href="#" title="Twitter">🐦</a>
+                        <a href="#" title="YouTube">📺</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <p><a href="#">Inicio</a></p>
+                    <p><a href="#">Sobre Nosotros</a></p>
+                    <p><a href="#">Categorías</a></p>
+                    <p><a href="#">Contacto</a></p>
+                    <p><a href="#">Política de Privacidad</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Categorías</h3>
+                    <p><a href="#">Cuidados de Gatos</a></p>
+                    <p><a href="#">Cuidados de Perros</a></p>
+                    <p><a href="#">Salud Animal</a></p>
+                    <p><a href="#">Adopción</a></p>
+                    <p><a href="#">Comportamiento</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Suscríbete para recibir los mejores consejos y noticias sobre mascotas directamente en tu correo.</p>
+                    <input type="email" class="search-box" placeholder="Tu correo electrónico..." style="margin: 1rem 0;">
+                    <button class="btn-secondary" onclick="subscribeNewsletter()">
+                        📧 Suscribirse
+                    </button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PetLog. Todos los derechos reservados. Hecho con ❤️ para los amantes de las mascotas.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
