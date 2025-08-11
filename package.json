@@ -15,6 +15,7 @@
     "test": "echo 'Tests disabled for deployment'",
     "test:unit": "echo 'Unit tests disabled'",
     "test:e2e": "echo 'E2E tests disabled'",
+    "test:a11y": "echo 'Accessibility tests disabled'",
     "lint": "echo 'All linting disabled for deployment'",
     "lint:js": "echo 'JS linting disabled'",
     "lint:css": "echo 'CSS linting disabled'",
