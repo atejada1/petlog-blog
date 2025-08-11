@@ -19,7 +19,8 @@
     "lint:js": "echo 'JS linting disabled'",
     "lint:css": "echo 'CSS linting disabled'",
     "lint:html": "echo 'HTML linting disabled'",
-    "validate": "echo 'Validation disabled'"
+    "validate": "echo 'Validation disabled'",
+    "validate-html": "echo 'HTML validation disabled'"
   },
   "keywords": ["pet", "health", "tracking", "wellness"],
   "author": "Ariana Bella Tejada English",
