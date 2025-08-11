@@ -1,5 +1,5 @@
 {
-  "name": "petlog-website",
+  "name": "petlog-blog",
   "version": "1.0.0",
   "description": "PetLog - Track your pet's health and wellness",
   "main": "src/index.html",

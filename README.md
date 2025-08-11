@@ -21,7 +21,7 @@ Un blog moderno y responsivo dedicado a los amantes de las mascotas, construido 
 ## 📁 Estructura del Proyecto
 
 ```
-petlog-website/
+petlog-blog/
 ├── src/
 │   ├── index.html          # Página principal
 │   ├── css/
@@ -38,8 +38,8 @@ petlog-website/
 
 1. **Clona el repositorio**:
    ```bash
-   git clone https://github.com/tu-usuario/petlog-website.git
-   cd petlog-website
+   git clone https://github.com/tu-usuario/petlog-blog.git
+   cd petlog-blog
    ```
 
 2. **Abre el proyecto**:
