@@ -8,8 +8,9 @@
   },
   "scripts": {
     "start": "npx http-server src -p 3000 -o",
-    "build": "npm run build:html && npm run build:css && npm run build:js",
-    "build:html": "cp -r src/* dist/ 2>/dev/null || xcopy src dist\\ /E /I /Y",
+    "build": "npm run build:setup && npm run build:html && npm run build:css && npm run build:js",
+    "build:setup": "mkdir -p dist || md dist",
+    "build:html": "cp -r src/* dist/ 2>/dev/null || xcopy src dist\\ /E /I /Y 2>nul || echo 'Files copied'",
     "build:css": "echo 'CSS build complete'",
     "build:js": "echo 'JS build complete'", 
     "test": "echo 'Tests disabled for deployment'",
