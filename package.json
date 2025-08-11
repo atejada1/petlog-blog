@@ -17,7 +17,7 @@
     "optimize:images": "echo 'Image optimization placeholder - add imagemin if needed'",
     "lint": "npm run lint:html && npm run lint:js",
     "lint:html": "npx htmlhint src/**/*.html",
-    "lint:css": "echo CSS linting disabled",
+    "lint:css": "echo 'CSS linting disabled - keeping working styles'",
     "lint:js": "npx eslint src/**/*.js",
     "test": "npm run test:unit && npm run test:integration",
     "test:unit": "npx jest",
