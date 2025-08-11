@@ -107,6 +107,7 @@ jobs:
           ✅ Deployed to production
           
           Your website is live at: ${{ needs.deploy.outputs.page_url || 'https://atejada1.github.io/petlog-website/' }}
+
           
           Pipeline run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         to: petlog.pipeline@gmail.com

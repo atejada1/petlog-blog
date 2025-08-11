@@ -28,11 +28,12 @@
   "keywords": ["pet", "health", "tracking", "wellness"],
   "author": "Ariana Bella Tejada English",
   "license": "MIT",
-  "homepage": "https://atejada1.github.io/petlog-website/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/atejada1/petlog-website.git"
-  },
+  "homepage": "https://atejada1.github.io/petlog-blog/",
+"repository": {
+  "type": "git",
+  "url": "https://github.com/atejada1/petlog-blog.git"
+}
+,
   "devDependencies": {
     "http-server": "^14.1.1"
   }
